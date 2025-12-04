@@ -11,7 +11,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <GoogleTagManager gtmId="GTM-PJMR52G2" />
+        <GoogleTagManager gtmId="GTM-PK6HB293" />
         <Script
           type="text/javascript"
           src="https://app.monetizze.com.br/upsell_incorporado.php"

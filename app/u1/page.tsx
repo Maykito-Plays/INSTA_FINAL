@@ -499,6 +499,18 @@ export default function U1() {
     }
   }, [isCompleted, timeLeft]);
 
+  useEffect(() => {
+    if (isCompleted) {
+      if (typeof (window as any).checkoutElements !== 'undefined') {
+        try { 
+          (window as any).checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel'); 
+        } catch (e) { 
+          console.error("Failed to mount Hotmart widget:", e); 
+        }
+      }
+    }
+  }, [isCompleted]);
+
   const handleStartLoadingProcess = () => {
     const fullNumber = (selectedCountry.code + phoneNumber).replace(/[^0-9+]/g, "")
     if (fullNumber.length > 10) {
@@ -522,7 +534,7 @@ export default function U1() {
         </p>
       </div>
       
-      <Script src="https://upsell.mundpay.com/script-v2.js" strategy="afterInteractive" />
+      <Script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js" strategy="afterInteractive" />
 
      <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center px-4 py-12">
   <main className="w-full max-w-md mx-auto text-center space-y-8">
@@ -653,8 +665,7 @@ export default function U1() {
                         <p className="text-xs text-red-700">After the time expires, this report will be permanently deleted for privacy reasons. This offer cannot be recovered at a later date.</p>
                       </div>
                       
-                      <div className="w-full pt-4" data-mndpay-render="019aea13-a150-70f8-b1ce-2d63ceb7cd4e"></div>
-
+                      <div id="hotmart-sales-funnel" className="w-full pt-4"></div>
                     </div>
                   </div>
                 </div>
