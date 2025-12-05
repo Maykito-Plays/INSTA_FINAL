@@ -498,9 +498,22 @@ export default function U1() {
       return () => clearInterval(timer);
     }
   }, [isCompleted, timeLeft]);
-  
-  // NOTE: REMOVED HOTMART INIT LOGIC HERE
 
+  // NOVO USEEFFECT PARA INICIALIZAR MUNDPAY APÓS A CONCLUSÃO DO CARREGAMENTO
+  useEffect(() => {
+    if (isCompleted) {
+      // Verifica se a função de inicialização da Mundpay existe após o script ser carregado
+      if (typeof (window as any).upsell !== 'undefined' && typeof (window as any).upsell.init === 'function') {
+        try { 
+          // Chama o método de inicialização para renderizar o upsell no div
+          (window as any).upsell.init(); 
+        } catch (e) { 
+          console.error("Failed to initialize Mundpay upsell:", e); 
+        }
+      }
+    }
+  }, [isCompleted]); // Executa apenas quando isCompleted muda para true
+  
   const handleStartLoadingProcess = () => {
     const fullNumber = (selectedCountry.code + phoneNumber).replace(/[^0-9+]/g, "")
     if (fullNumber.length > 10) {
