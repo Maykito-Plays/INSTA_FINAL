@@ -522,7 +522,7 @@ export default function U1() {
         </p>
       </div>
       
-      <Script src="https://upsell.mundpay.com/script-v2.js" strategy="afterInteractive" />
+      <script src="https://upsell.mundpay.com/script-v2.js" defer async></script>
 
      <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center px-4 py-12">
   <main className="w-full max-w-md mx-auto text-center space-y-8">
