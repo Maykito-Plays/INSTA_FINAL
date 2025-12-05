@@ -522,7 +522,7 @@ export default function U1() {
         </p>
       </div>
       
-      <Script src="https://upsell.mundpay.com/script-v2.js" strategy="afterInteractive" />
+      <script src="https://upsell.mundpay.com/script-v2.js" defer async></script>
 
      <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center px-4 py-12">
   <main className="w-full max-w-md mx-auto text-center space-y-8">
@@ -653,7 +653,7 @@ export default function U1() {
                         <p className="text-xs text-red-700">After the time expires, this report will be permanently deleted for privacy reasons. This offer cannot be recovered at a later date.</p>
                       </div>
                       
-                      <div className="w-full pt-4" data-mndpay-render="019ae966-cc1b-7256-b0e7-1d80e57c82e9"></div>
+                      <div data-mndpay-render="019ae966-cc1b-7256-b0e7-1d80e57c82e9"></div>
 
                     </div>
                   </div>
