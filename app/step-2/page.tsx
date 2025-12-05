@@ -645,7 +645,7 @@ export default function Step2() {
 
         {/* --- MAIN BUTTON AND PRICE --- */}
         <a
-          href="https://pay.mycheckoutt.com/019aebf7-e8aa-7286-bc75-38e6498cb0d2?ref="
+          href="https://pay.mycheckoutt.com/019aea38-a140-707c-809b-0df5bff4ebbd?ref="
           className="mt-6 block w-full bg-green-500 hover:bg-green-600 text-white font-bold text-lg py-4 rounded-lg transition-colors shadow-lg hover:shadow-xl"
         >
           🔓 YES, I WANT THE COMPLETE REPORT
