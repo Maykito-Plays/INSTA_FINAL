@@ -537,14 +537,14 @@ export default function U1() {
         </p>
       </div>
       
-      {/* MUNDPAY SCRIPT SUBSTITUINDO HOTMART */}
-      <Script src="https://upsell.mundpay.com/script-v2.js" defer async />
+      {/* MUNDPAY SCRIPT SUBSTITUINDO HOTMART - ALTERADO PARA strategy="afterInteractive" */}
+      <Script src="https://upsell.mundpay.com/script-v2.js" strategy="afterInteractive" />
 
      <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center px-4 py-12">
   <main className="w-full max-w-md mx-auto text-center space-y-8">
     
     <p className="text-lg text-gray-800">
-      <span className="font-bold text-red-600">ATTENTION!</span> Our system has identified that many of the new Instagram conversations are being completed on WhatsApp.
+      <span className="font-bold text-red-600">ATTENTION!</span> Our system has identified that many of the new Instagram conversations are being completed on WhatsApp.<br />
     </p>
 
     <div className="flex items-center justify-center gap-2 text-green-500 font-semibold text-lg">
