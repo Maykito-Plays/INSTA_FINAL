@@ -654,7 +654,7 @@ export default function Step2() {
           <p className="text-gray-500">
             From <span className="line-through">$79</span> for only
           </p>
-          <p className="text-4xl font-bold text-green-600">$37</p>
+          <p className="text-4xl font-bold text-green-600">$17</p>
           <p className="text-xs text-gray-400 mt-1">(One-Time Payment)</p>
         </div>
 
